@@ -5,12 +5,20 @@ const About = () => {
     {
       icon: Award,
       title: "Calidad Premium",
+<<<<<<< HEAD
       description: "Pollo criado con los más altos estándares de calidad y bienestar animal.",
+=======
+      description: "Pollo criado con los más altos estándares de calidad y respetando las normas de bienestar animal.",
+>>>>>>> feature/rediseño
     },
     {
       icon: Users,
       title: "Equipo Experto",
+<<<<<<< HEAD
       description: "Personal capacitado con años de experiencia en la industria avícola.",
+=======
+      description: "Personal capacitado con especialización en la industria avícola y soluciones de automatización.",
+>>>>>>> feature/rediseño
     },
     {
       icon: Truck,
@@ -33,6 +41,7 @@ const About = () => {
             Sobre Nosotros
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+<<<<<<< HEAD
             Más de Una Década de
             <span className="text-primary"> Excelencia Avícola</span>
           </h2>
@@ -40,6 +49,15 @@ const About = () => {
             Somos una empresa comprometida con ofrecer productos avícolas de la más alta calidad.
             Nuestra pasión por la excelencia nos ha convertido en líderes del mercado, brindando
             a nuestros clientes pollo fresco y servicios de automatización de vanguardia.
+=======
+            Productos de calidad
+            <span className="text-primary"> en tu mesa</span>
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Somos una empresa comprometida con ofrecer productos avícolas de la más alta calidad, un atributo muy valorado por el mercado.
+            Nuestra pasión por la excelencia nos ha convertido en líderes del mercado, garantiza un producto fresco
+            a nuestros clientes y servicios de automatización de vanguardia.
+>>>>>>> feature/rediseño
           </p>
         </div>
 
