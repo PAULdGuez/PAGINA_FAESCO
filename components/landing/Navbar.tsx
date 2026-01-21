@@ -20,11 +20,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">🐔</span>
-            </div>
+            <img src="img/logo.png" alt="Logo" className="w-20 h-20" />
             <span className="text-xl font-bold text-foreground">
-              Avícola<span className="text-primary">Pro</span>
+              FAESCO<span className="text-primary">Pro</span>
             </span>
           </a>
 
