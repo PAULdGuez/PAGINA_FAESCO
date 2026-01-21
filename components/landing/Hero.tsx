@@ -31,7 +31,7 @@ const Hero = () => {
               Pollo de
               <span className="text-primary"> Primera Calidad</span>
               <br />
-              Para Tu Negocio y Hogar
+              ¡Para Tu Negocio y Hogar!
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg">
