@@ -1,6 +1,10 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import styles from './styles.module.css'
+=======
+
+>>>>>>> feature/rediseño
 const Hero = () => {
   const benefits = [
     "Pollo fresco y de la más alta calidad",
@@ -31,7 +35,11 @@ const Hero = () => {
               Pollo de
               <span className="text-primary"> Primera Calidad</span>
               <br />
+<<<<<<< HEAD
               Para Tu Negocio
+=======
+              Para Tu Negocio y Hogar
+>>>>>>> feature/rediseño
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg">
@@ -80,11 +88,19 @@ const Hero = () => {
               {/* Central Icon */}
               <div className="relative z-10 text-center">
                 <div className="w-40 h-40 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+<<<<<<< HEAD
                   <span className="text-7xl">🐔</span>
                 </div>
                 <div className="bg-background/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
                   <p className="text-lg font-semibold text-foreground">
                     +10 Años de Experiencia
+=======
+                  <img src="img/logo.png" alt="Logo" className="w-70 h-50" />
+                </div>
+                <div className="bg-background/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+                  <p className="text-lg font-semibold text-foreground">
+                    Líderes en el manejo avícola
+>>>>>>> feature/rediseño
                   </p>
                 </div>
               </div>
