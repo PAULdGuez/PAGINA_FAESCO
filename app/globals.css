@@ -47,4 +47,18 @@
   /* Colores personalizados del tema avícola */
   --color-cream: hsl(var(--color-cream));
   --color-gold: hsl(var(--color-gold));
+
+  /* Definición de la animación para Tailwind v4 */
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+
+  /* Keyframes estándar de CSS */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
 }
