@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import styles from './styles.module.css'
 const Hero = () => {
   const benefits = [
     "Pollo fresco y de la más alta calidad",
