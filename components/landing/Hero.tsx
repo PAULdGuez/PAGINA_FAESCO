@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const benefits = [
-    "Pollo fresco y de calidad",
+    "Pollo fresco y de la más alta calidad",
     "Entregas a domicilio",
     "Precios competitivos",
   ];
@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="absolute top-10 left-10 w-20 h-20 bg-secondary rounded-full opacity-60" />
               <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary/20 rounded-full" />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-4 border-primary/30 rounded-full" />
-              
+
               {/* Central Icon */}
               <div className="relative z-10 text-center">
                 <div className="w-40 h-40 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
