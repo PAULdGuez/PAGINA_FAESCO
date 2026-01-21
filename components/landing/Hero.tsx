@@ -1,6 +1,6 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import styles from './styles.module.css'
 const Hero = () => {
   const benefits = [
     "Pollo fresco y de la más alta calidad",
@@ -29,7 +29,7 @@ const Hero = () => {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Pollo de
-              <span className="text-primary"> Primera Calidad</span>
+              <span className={styles.txtrojo}> Primera Calidad</span>
               <br />
               Para Tu Negocio
             </h1>
