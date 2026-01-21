@@ -35,17 +35,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-<<<<<<< HEAD
                 <span className="text-primary-foreground font-bold text-xl">🐔</span>
               </div>
               <span className="text-xl font-bold">
                 Avícola<span className="text-primary">Pro</span>
-=======
-                <img src="img/logo.png" alt="Logo" className="w-15 h-10" />
-              </div>
-              <span className="text-xl font-bold">
-                FAESCO<span className="text-primary">Pro</span>
->>>>>>> feature/rediseño
               </span>
             </div>
             <p className="text-background/70 mb-6">
@@ -69,11 +62,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-<<<<<<< HEAD
             <h4 className="text-lg font-semibold mb-6">Enlaces Rápidos</h4>
-=======
-            <h4 className="text-lg font-semibold mb-6">Sitios de interés</h4>
->>>>>>> feature/rediseño
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -112,28 +101,16 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
                 <span className="text-background/70">
-<<<<<<< HEAD
                   Av. Principal #123, Col. Centro
-=======
-                  Av. Vía Lago #120 San Felipe, Texcoco, Edo. de México, CP 56256
->>>>>>> feature/rediseño
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-<<<<<<< HEAD
                 <span className="text-background/70">+52 (123) 456-7890</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <span className="text-background/70">ventas@avicolapro.com</span>
-=======
-                <span className="text-background/70">+52 (56) 353-6397</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <span className="text-background/70">al19106129@chapingo.mx</span>
->>>>>>> feature/rediseño
               </li>
             </ul>
           </div>
