@@ -29,7 +29,7 @@ const Hero = () => {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Pollo de
-              <span className={styles.txtrojo}> Primera Calidad</span>
+              <span className="text-primary"> Primera Calidad</span>
               <br />
               Para Tu Negocio
             </h1>
