@@ -109,6 +109,27 @@ const Checkout = () => {
     setIsSubmitting(false);
     setIsConfirmed(true);
     clearCart();
+
+    // GUARDADO DATOS EN SUPABASE _---------------
+    const { error } = await supabase.from("pedidos").insert([
+      {
+        nombre_cliente: formData.fullName,
+        telefono: formData.phone,
+        correo_e: formData.email,
+        metodo_pago: paymentMethod,
+        cant_producto: quantity.toString(),
+      },
+    ]);
+    if (error) {
+      console.error(error);
+      toast({
+        title: "Error al guardar el pedido",
+        description: "Intenta nuevamente.",
+        variant: "destructive",
+      });
+      return;
+    }
+    // -----------------------------------------------
     
     toast({
       title: "¡Pedido confirmado!",
