@@ -35,17 +35,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Ubicación",
-      details: ["Av. Principal #123", "Col. Centro, CP 12345"],
+      details: ["Av. Vía Lago #120 San Felipe", "Texcoco, Edo. de México, CP 56256"],
     },
     {
       icon: Phone,
       title: "Teléfono",
-      details: ["+52 (123) 456-7890", "+52 (123) 456-7891"],
+      details: ["+52 (56) 3536-3697", "+52 (56) 2832-5110"],
     },
     {
       icon: Mail,
       title: "Correo",
-      details: ["ventas@avicolapro.com", "info@avicolapro.com"],
+      details: ["al19106129@chapingo.mx", "alfredo@itgreen.com", "paul@itgreen.com"],
     },
     {
       icon: Clock,
