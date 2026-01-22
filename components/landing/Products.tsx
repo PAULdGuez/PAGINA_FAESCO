@@ -1,8 +1,16 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Star } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import { useRouter } from "next/navigation"
+
 
 const Products = () => {
+  const { setCartItem } = useCart();
+  const router = useRouter();
+
   const products = [
     {
       name: "Pollo Entero",
@@ -98,7 +106,21 @@ const Products = () => {
                     <span className="text-3xl font-bold text-primary">{product.price}</span>
                     <span className="text-muted-foreground text-sm ml-1">{product.unit}</span>
                   </div>
-                  <Button size="sm" className="bg-primary hover:bg-accent">
+                  <Button 
+                    size="sm" 
+                    className="bg-primary hover:bg-accent"
+                    onClick={() => {
+                      setCartItem({
+                        name: product.name,
+                        description: product.description,
+                        price: product.price,
+                        unit: product.unit,
+                        image: product.image,
+                        quantity: 1,
+                      });
+                      router.push("/checkout");
+                    }}
+                  >
                     <ShoppingCart className="w-4 h-4 mr-2" />
                     Ordenar
                   </Button>
