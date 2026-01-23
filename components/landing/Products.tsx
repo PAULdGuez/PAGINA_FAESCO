@@ -6,8 +6,6 @@ import { ShoppingCart, Star } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import { useRouter } from "next/navigation"
 
-
-
 const Products = () => {
   const { setCartItem } = useCart();
   const router = useRouter();
@@ -18,14 +16,15 @@ const Products = () => {
       description: "Pollo fresco entero, ideal para rostizar o preparar al horno. Entero o por pieza. Peso promedio 2.7 kg.",
       price: "$85",
       unit: "por pieza",
-      image: <img src="img/pollo_entero.png" alt="Pollo Entero" className="w-20 h-20" />,
+      image: "img/pollo_entero.png",
       popular: true,
     },
     {
+      name: "Pechuga de Pollo",
       description: "Pechuga con o sin hueso, perfecta para filetes y comidas saludables.",
       price: "$120",
       unit: "por kg",
-      image: <img src="img/pechuga.png" alt="Pechuga de Pollo" className="w-20 h-20" />,
+      image: "img/pechuga.png",
       popular: false,
     },
     {
@@ -33,7 +32,7 @@ const Products = () => {
       description: "Pieza con hueso, ideal para guisos, caldos y platillos tradicionales.",
       price: "$75",
       unit: "por kg",
-      image: <img src="img/pierna_muslo.png" alt="Pierna y Muslo" className="w-20 h-20" />,
+      image: "img/pierna_muslo.png",
       popular: false,
     },
     {
@@ -41,7 +40,7 @@ const Products = () => {
       description: "Perfectas para botanear, preparar al carbón o en salsa BBQ.",
       price: "$65",
       unit: "por kg",
-      image: <img src="img/alas.png" alt="Alas de Pollo" className="w-20 h-20" />,
+      image: "img/alas.png",
       popular: true,
     },
     {
@@ -49,7 +48,7 @@ const Products = () => {
       description: "Hígado, patas, molleja y corazón frescos para platillos tradicionales.",
       price: "$45",
       unit: "por kg",
-      image: <img src="img/menudencias.png" alt="Menudencias" className="w-20 h-20" />,
+      image: "img/menudencias.png",
       popular: false,
     },
     {
@@ -57,7 +56,7 @@ const Products = () => {
       description: "Pollo vivo para quienes prefieren prepararlo a su manera. Peso promedio 2.9 kg.",
       price: "$70",
       unit: "por pieza",
-      image: <img src="img/pollo_pie.png" alt="Pollo en Pie" className="w-20 h-20" />,
+      image: "img/pollo_pie.png",
       popular: false,
     },
   ];
@@ -95,7 +94,7 @@ const Products = () => {
               )}
               <CardHeader className="pb-4">
                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <span className="text-4xl">{product.image}</span>
+                  <img src={product.image} alt={product.name} className="w-20 h-20" />
                 </div>
                 <CardTitle className="text-xl">{product.name}</CardTitle>
                 <CardDescription>{product.description}</CardDescription>
