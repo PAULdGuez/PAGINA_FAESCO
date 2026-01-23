@@ -36,8 +36,8 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 bg-gradient-to-br from-primary to-accent text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <section id="servicios" className="py-20 bg-gradient-to-br from-primary to-accent text-primary-foreground overflow-hidden">
+      <div className="container mx-auto px-4 animate-in slide-in-from-right-8 fade-in duration-700">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-4">

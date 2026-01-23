@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 import FloatingCart from "@/components/ui/FloatingCart";
+import FlyToCartAnimation from "@/components/ui/FlyToCartAnimation";
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <FloatingCart />
+          <FlyToCartAnimation />
         </CartProvider>
       </body>
     </html>

@@ -145,7 +145,7 @@ const Products = () => {
           {products.map((product) => (
             <Card
               key={product.id}
-              className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30 relative overflow-hidden"
+              className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 relative overflow-hidden hover:-translate-y-1"
             >
               {product.popular && (
                 <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium flex items-center">
@@ -176,7 +176,17 @@ const Products = () => {
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-accent"
-                    onClick={() => {
+                    onClick={(e) => {
+                      // Trigger fly animation
+                      const img = e.currentTarget.closest('.group')?.querySelector('img');
+                      if (img) {
+                        const rect = img.getBoundingClientRect();
+                        const event = new CustomEvent('fly-to-cart', {
+                          detail: { src: product.image, rect }
+                        });
+                        window.dispatchEvent(event);
+                      }
+
                       addToCart({
                         id: product.id,
                         name: product.name,
