@@ -18,16 +18,19 @@ export const metadata: Metadata = {
   description: "Sistema de gestión para pollería",
 };
 
+import FloatingCart from "@/components/ui/FloatingCart";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className = "scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <CartProvider>
           {children}
+          <FloatingCart />
         </CartProvider>
       </body>
     </html>
