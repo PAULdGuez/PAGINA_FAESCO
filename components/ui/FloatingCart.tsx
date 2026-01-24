@@ -7,10 +7,16 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+import { usePathname } from "next/navigation";
+
 const FloatingCart = () => {
     const { cartCount } = useCart();
     const router = useRouter();
+    const pathname = usePathname();
     const [isBouncing, setIsBouncing] = useState(false);
+
+    // Hide on admin/login pages
+    if (pathname?.startsWith("/admin") || pathname === "/login") return null;
 
     // Trigger bounce animation when cart count changes
     useEffect(() => {

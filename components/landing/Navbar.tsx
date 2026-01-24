@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import styles from './styles.module.css'
 const Navbar = () => {
@@ -61,6 +61,14 @@ const Navbar = () => {
             <Button variant="default" className="bg-primary hover:bg-accent">
               <Phone className="w-4 h-4 mr-2" />
               Cotizar Ahora
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-primary"
+              onClick={() => window.location.href = '/login'}
+            >
+              <Lock className="w-4 h-4" />
             </Button>
           </div>
 

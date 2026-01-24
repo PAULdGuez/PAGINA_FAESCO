@@ -19,6 +19,26 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Parse price helper
+  const getPriceValue = (priceStr: string | null) => {
+    if (!priceStr) return 0;
+    return parseFloat(priceStr.replace(/[^0-9.]/g, '')) || 0;
+  };
+
+  // Calculate discount
+  const getDiscountedPrice = (product: Product) => {
+    const originalPrice = getPriceValue(product.price);
+    if (!product.discount_percentage || !product.discount_expires_at) return null;
+
+    const now = new Date();
+    const expires = new Date(product.discount_expires_at);
+
+    if (now > expires) return null; // Expired
+
+    const discountAmount = (originalPrice * product.discount_percentage) / 100;
+    return originalPrice - discountAmount;
+  };
+
   // Static fallback data (used if DB is empty or fails)
   const staticProducts = [
     {
@@ -147,8 +167,15 @@ const Products = () => {
               key={product.id}
               className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-2 hover:border-primary/50 relative overflow-hidden hover:-translate-y-1"
             >
+              {/* Discount Badge */}
+              {getDiscountedPrice(product) !== null && (
+                <div className="absolute top-4 left-4 bg-destructive text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse z-10 shadow-lg">
+                  -{product.discount_percentage}% OFF
+                </div>
+              )}
+
               {product.popular && (
-                <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-xs font-medium flex items-center z-10">
                   <Star className="w-3 h-3 mr-1 fill-current" />
                   Popular
                 </div>
@@ -170,8 +197,24 @@ const Products = () => {
               <CardContent>
                 <div className="flex items-end justify-between">
                   <div>
-                    <span className="text-3xl font-bold text-primary">{product.price}</span>
-                    <span className="text-muted-foreground text-sm ml-1">{product.unit}</span>
+                    {getDiscountedPrice(product) !== null ? (
+                      <div className="flex flex-col">
+                        <span className="text-sm text-muted-foreground line-through decoration-destructive decoration-2">
+                          {product.price}
+                        </span>
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-3xl font-bold text-destructive">
+                            ${getDiscountedPrice(product)?.toFixed(2)}
+                          </span>
+                          <span className="text-muted-foreground text-sm">{product.unit}</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div>
+                        <span className="text-3xl font-bold text-primary">{product.price}</span>
+                        <span className="text-muted-foreground text-sm ml-1">{product.unit}</span>
+                      </div>
+                    )}
                   </div>
                   <Button
                     size="sm"
@@ -187,11 +230,16 @@ const Products = () => {
                         window.dispatchEvent(event);
                       }
 
+                      // Use discounted price if available
+                      const finalPrice = getDiscountedPrice(product)
+                        ? `$${getDiscountedPrice(product)?.toFixed(2)}`
+                        : (product.price || "$0");
+
                       addToCart({
                         id: product.id,
                         name: product.name,
                         description: product.description || "",
-                        price: product.price || "$0",
+                        price: finalPrice,
                         unit: product.unit || "",
                         image: product.image || "",
                       });

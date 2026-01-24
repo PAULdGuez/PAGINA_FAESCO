@@ -18,6 +18,8 @@ export interface Database {
                     unit: string | null
                     image: string | null
                     popular: boolean | null
+                    discount_percentage?: number | null
+                    discount_expires_at?: string | null
                     created_at: string
                 }
                 Insert: {
@@ -28,6 +30,8 @@ export interface Database {
                     unit?: string | null
                     image?: string | null
                     popular?: boolean | null
+                    discount_percentage?: number | null
+                    discount_expires_at?: string | null
                     created_at?: string
                 }
                 Update: {
@@ -38,6 +42,8 @@ export interface Database {
                     unit?: string | null
                     image?: string | null
                     popular?: boolean | null
+                    discount_percentage?: number | null
+                    discount_expires_at?: string | null
                     created_at?: string
                 }
             }
