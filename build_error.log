@@ -1,0 +1,30 @@
+
+> my-next-app@0.1.0 build
+> next build
+
+ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Usuario\Documents\ESTANCIA IT GREE\FAESCO DOS NEXTJS\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Usuario\Documents\ESTANCIA IT GREE\FAESCO DOS NEXTJS\PAGINA_FAESCO\package-lock.json
+
+Ôû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 1887.0ms
+  Running TypeScript ...
+Failed to compile.
+
+./arduino-gui-builder/app/builder/[id]/page.tsx:5:33
+Type error: Cannot find module '@/store/useProjectStore' or its corresponding type declarations.
+
+  3 | import { useEffect, useState } from "react";
+  4 | import { useParams, useRouter } from "next/navigation"; // Correct import for App Router
+> 5 | import { useProjectStore } from "@/store/useProjectStore";
+    |                                 ^
+  6 | import { Canvas } from "@/components/builder/Canvas";
+  7 | import { Toolbar } from "@/components/builder/Toolbar";
+  8 | import { PropertiesPanel } from "@/components/builder/PropertiesPanel";
+Next.js build worker exited with code: 1 and signal: null
