@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 const Hero = () => {
   const benefits = [
     "Pollo fresco y de la más alta calidad",
-    "Entregas a domicilio",
+    "Entregas hasta su domicilio",
     "Precios competitivos",
   ];
 
