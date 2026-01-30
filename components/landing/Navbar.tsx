@@ -39,7 +39,7 @@ const Navbar = () => {
               <img src="img/logo.png" alt="Logo" className="w-15 h-15" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              FAE<span className="text-primary">SCO</span>
+              FAE<span className="text-primary">SCO...</span>
             </span>
           </a>
 
